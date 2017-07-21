@@ -12,6 +12,7 @@ gem "jekyll", "3.5.0"
 
 group :jekyll_plugins do
   gem 'jekyll-contentblocks'
+  gem 'github-pages'
 end
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
