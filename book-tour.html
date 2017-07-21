@@ -1,0 +1,102 @@
+---
+layout: default
+title: Agenda tu Tour - EDGE Cowork
+permalink: /book-tour/
+lang: en
+---
+
+{% contentfor css %}
+  <link href="/assets/fullcalendar/fullcalendar.css" rel='stylesheet' />
+  <link href="/assets/fullcalendar/fullcalendar.print.css" rel='stylesheet' media='print' />
+  <link rel="stylesheet" href="/assets/ladda_spinner/ladda.min.css">
+{% endcontentfor %}
+
+{% contentfor js %}
+  <script src="/assets/fullcalendar/lib/moment.min.js"></script>
+  <script src="/assets/fullcalendar/fullcalendar.min.js"></script>
+  <script src="/assets/fullcalendar/locale/es.js"></script>
+  <script src="/assets/fullcalendar/gcal.js"></script>
+  <script src="/assets/functions/agenda-tour.js"></script>
+{% endcontentfor %}
+
+<section id="mini_fold">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-offset-2 col-md-8 text-center">
+        <h1>Book a tour</h1>
+        <div class="margin_top_30px">
+          <p>Choose a time that works best for you and one of our Office Managers will show you around the Cowork and answer all of your questions.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h3>Choose a schedule</h3>
+        <div id="calendar"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="modal fade" id="calendar_book_modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <form method="POST">
+        <input type="hidden" name="slot_to_book" id="slot_to_book">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+          <h5 class="modal-title highlight text-center" id="calendar_book_modal_label">Book a tour</h5>
+        </div>
+        <div class="modal-body">
+          <div id="email_exists" class="alert alert-danger" hidden>
+            You have a tour scheduled. Please check your email for the invitation we sent you.
+          </div>
+
+          <div class="form-group">
+            Do you want to book a tour for <em><span id="book_tour_span"></span></em>?
+          </div>
+
+          <input type="hidden" id="location" name="location" value="1">
+
+        </div>
+        <div class="modal-footer">
+          <button id="button_agendar" type="submit" class="ladda-button btn btn-primary" data-style="expand-right"><span class="ladda-label">Schedule tour</span></button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="modal_contacto" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+        <h4 class="modal-title">Send us an message for more information</h4>
+      </div>
+      <form id="form_verifica_email_modal" method="POST">
+        <div class="modal-body">
+          <div class="form-group">
+                            <label for="email_contact_form">Email</label>
+                            <input type="email" class="form-control" id="email_contact_form" placeholder="Correo electrónico" required="">
+                        </div>
+                        <div class="form-group">
+                            <label for="mensaje_contact_form">Message</label>
+                            <textarea id="mensaje_contact_form" class="form-control" rows="3" required=""></textarea>
+                        </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button id="l_button_contanct" type="submit" class="btn btn-primary">Send</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+

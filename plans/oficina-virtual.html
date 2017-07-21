@@ -1,0 +1,89 @@
+---
+layout: default
+title: Oficina Virtual - EDGE Cowork
+permalink: /plans/oficina-virtual/
+active_menu: planes
+navbar_extra_classes: home
+lang: en
+---
+
+{% contentfor css %}
+  <link href="/assets/css/single_membership.css" rel="stylesheet">
+{% endcontentfor %}
+
+{% contentfor js %}
+  <script src="/assets/functions/oficinal_virtual.js"></script>
+  <script type="text/javascript">
+    $( "#select_locations" ).change(function() {
+      select_locations = $( "#select_locations" ).val();
+      $("#precio").html(select_locations);
+    });
+
+    $( "#select_locations_pt" ).change(function() {
+      select_locations_pt = $( "#select_locations_pt" ).val();
+      $("#precio_pt").html(select_locations_pt);
+    });
+  </script>
+{% endcontentfor %}
+
+
+<div id="oficina_virtual" class="fold">
+  <div class="overlay">
+    <div class="fold-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7">
+            <h1>Virtual Office
+            <p class="slogan">Get your legal back office in order and become a member of Edge</p>
+            <div class="margin_top_30px">
+              <p>Make Edge Cowork your official commercial address and let us receive your mail and packages. With your Virtual Office you immediately become a member of the Edge network and will enjoy all the discounts and perks offered by our partners.</p>
+              <p>We offer a highly personalized service. We help you change your business address and get your commercial patent, saving you from the endless paperwork. If you ever need anything, our Office Managers are just a message away.</p>
+            </div>
+          </div>
+          <div class="col-md-offset-1 col-md-4">
+            {% include plan-tour-form.html %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% include find-membership.html %}
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h2 class="text-left">The Virtual Office includes</h2>
+        <div class="membresia_list_second"><i class="fa fa-car"></i> Onsite Office Manager during working hours</div>
+        <div class="membresia_list_second"><i class="fa fa-hdd-o"></i> Color printers and scanners</div>
+        <div class="membresia_list_second"><i class="fa fa-clock-o"></i> 1 hour a month to book one of our meeting rooms</div>
+        <div class="membresia_list_second"><i class="fa fa-handshake-o"></i> Access to Edge events</div>
+      </div>
+      <div class="col-md-6 text-left">
+        <h2>Choose location</h2>
+        <div class="membresia_list_second margin_top_30px">El golf $30.000 a month / Mes</div>
+        <div class="membresia_list_second">El golf $330.000 a year Te regalamos un mes</div>
+        <div class="membresia_list_second">Bellavista $20.000 a month / Mes</div>
+        <div class="membresia_list_second">Bellavista $220.000 a year </div>
+        <div class="membresia_list_second">Núcleo Ochagavía $10.000 a month/ Mes</div>
+        <div class="membresia_list_second">Bellavista $110.000 a year </div>
+      </div>
+    </div>
+    <!--
+    <div class="row margin_top_60px">
+      <div class="col-md-offset-3 col-md-6">
+        <h4>Desde <span id="precio">$100.000</span> / Mes</h4>
+        <select id="select_locations" class="form-control">
+          <option value="$100.000">El Golf</option>
+          <option value="$120.000">Bellavista</option>
+          <option value="$130.000">Nucleo Ochagavía</option>
+        </select>
+        <br>
+        <a href="" class="btn btn-default btn-block">CTA</a>
+      </div>
+    </div>
+    -->
+  </div>
+</section>

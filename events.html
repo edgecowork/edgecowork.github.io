@@ -1,0 +1,139 @@
+---
+layout: default
+title: Events Edge Cowork
+permalink: /events/
+navbar_extra_classes: simple
+lang: en
+---
+
+{% contentfor css %}
+  <link href="/assets/css/eventos.css" rel="stylesheet">
+{% endcontentfor %}
+
+{% contentfor js %}
+  <script src="/assets/bootstrap-datetimepicker/moment.js"></script>
+  <script src="/assets/bootstrap-datetimepicker/js/es.js"></script>
+  <script src="/assets/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+  <script src="/assets/validator/validator.min.js"></script>
+  <script src="/assets/functions/eventos.js"></script>
+{% endcontentfor %}
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-offset-2 col-md-8 text-left">
+        <h1>Events and Activities</h1>
+        <div class="margin_top_30px">
+          <p>Events play a fundamental role in the Edge experience. We love to use our facilities to host events that teach, inspire and connect.</p>
+          <p>Workshops, talks, meetups, networking events, game nights, you name it. We are always open to new ideas for events that support and build the local entrepreneurial community. More importantly, we look for events that have a meaningful impact on the people who attend. Even if you are not a member of Edge Cowork, you are more than welcome to use our space to host your event.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<img style="padding-top: 60px;" src="/assets/imgs/eventos/candles-eventos.jpg">
+
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 text-justify">
+        <h2>Organize your event at Edge</h2>
+        <p>Interested in using our infrastructure to host your next event? No problem. We have got your space needs covered.</p>
+
+        <p>Edge has unique event spaces in multiple locations. Host small gatherings and meetups of up to 25 people in El Golf. For larger events of up to 100 people, check out  <a href="../ubicaciones/bellavista/"> Bellavista </a> and <a href="../ubicaciones/nucleo-ochagavia.html">Ochagavía</a>. Each Edge building also boasts meeting rooms for workshops and seminars. We also have round tables that seat up to 8 people for team activities or classes.</p>
+
+        <p>All of our event spaces come equipped with audio, microphones, projectors or screens.</p>
+
+        <div class="row">
+          <div class="col-md-12">
+            <img width="560" src="/assets/imgs/eventos/startup-event-500.png">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-offset-1 col-md-5">
+        <h2>Request space</h2>
+        <div id="success_solicita" class="alert alert-success hidden" role="alert">Thank you for your information. One of our Office Managers will be in touch with you shortly regarding your request.</div>
+        <form data-toggle="validator" role="form" id="solicita_un_espacio">
+          <div class="form-group">
+            <input type="text" class="form-control" id="nombre" placeholder="Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control" id="email" placeholder="Email" required>
+          </div>
+          <div class="form-group">
+            <select class="form-control" required id="lugar">
+              <option value="">Location</option>
+              <option value="el_golf">El Golf</option>
+              <option value="bellavista">Bellavista</option>
+              <option value="ochogavia">Ochagavía</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" id="celular" placeholder="Phone number" required>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" id="fecha" placeholder="Date and time" required>
+          </div>
+          <div class="form-group">
+            <select class="form-control" required id="tipo_evento">
+              <option value="">Type of event</option>
+              <option value="charla">Charla o meetup</option>
+              <option value="lanzamientos">Company or launch event</option>
+              <option value="taller">Workshop or class</option>
+              <option value="cultural">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <textarea id="cuentanos" class="form-control" rows="3" placeholder="Tell us what you plan to do." required></textarea>
+          </div>
+          <button id="button_solicita" class="ladda-button btn btn-default btn-block" data-style="expand-right">
+            <span class="ladda-label">Send</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="newsletter">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h5 class="heading-alt">Never miss out on another event</h5>
+      </div>
+      <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+          <form class="form-inline" id="form_newsletter">
+            <div class="form-group">
+              <input type="email" class="form-control" id="email_newsletter" placeholder="Correo electrónico" required>
+            </div>
+            <button id="button_newsletter" class="ladda-button btn btn-default" data-style="expand-right">
+            <span class="ladda-label">Sign me up</span>
+          </button>
+          </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h2>Upcoming events</h2>
+        <h4 class="hidden no_hay_eventos">There are no upcoming events</h4>
+      </div>
+    </div>
+    <div class="row margin_top_30px" id="event_list">
+    </div>
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h2>Past events</h2>
+      </div>
+    </div>
+    <div class="row margin_top_30px" id="event_list_pasados">
+    </div>
+  </div>
+</section>

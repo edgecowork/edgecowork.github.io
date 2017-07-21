@@ -1,0 +1,93 @@
+---
+layout: default
+title: Edge Cowork - Plan Oficina Virtual
+permalink: /planes/oficina-virtual/
+active_menu: planes
+navbar_extra_classes: home
+lang: es
+---
+
+{% contentfor css %}
+  <link href="/assets/css/single_membership.css" rel="stylesheet">
+{% endcontentfor %}
+
+{% contentfor js %}
+  <script src="/assets/functions/oficinal_virtual.js"></script>
+  <script type="text/javascript">
+    $( "#select_locations" ).change(function() {
+      select_locations = $( "#select_locations" ).val();
+      $("#precio").html(select_locations);
+    });
+
+    $( "#select_locations_pt" ).change(function() {
+      select_locations_pt = $( "#select_locations_pt" ).val();
+      $("#precio_pt").html(select_locations_pt);
+    });
+  </script>
+{% endcontentfor %}
+
+
+<div id="oficina_virtual" class="fold">
+  <div class="overlay">
+    <div class="fold-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7">
+            <h1>Oficina virtual</h1>
+            <p class="slogan">Ten todo en orden y sé miembro de Edge</p>
+            <div class="margin_top_30px">
+              <p>Haz que Edge Cowork sea tu dirección comercial y déjanos recibir tu correo y paquetes. Con tu Oficina Virtual te conviertes inmediatamente en un miembro de la red Edge y disfrutarás de todos los descuentos y beneficios ofrecidos por nuestros socios.</p>
+
+              <p>Ofrecemos un servicio altamente personalizado. Te ayudamos a cambiar la dirección de tu negocio y obtener la patente comercial, ahorrándote el trámite infinito de papeles. Si alguna vez necesitas algo, solo estamos a una llamada!</p>
+            </div>
+          </div>
+          <div class="col-md-offset-1 col-md-4">
+            {% include plan-tour-form.html %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% include find-membership.html %}
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h2 class="text-left">La oficina virtual incluye</h2>
+        <div class="membresia_list_second margin_top_30px"><i class="fa fa-archive"></i> 1 hora al mes para reservar una de nuestras salas de reuniones</div>
+        <div class="membresia_list_second"><i class="fa fa-money"></i> Impresora y scanner</div>
+        <div class="membresia_list_second"><i class="fa fa-snowflake-o"></i> Office Manager in-situ durante las horas de trabajo</div>
+        <div class="membresia_list_second"><i class="fa fa-car"></i> Casilleros y bicicletero</div>
+        <div class="membresia_list_second"><i class="fa fa-hdd-o"></i> Estacionamiento para los invitados (sujeto a disponibilidad) </div>
+        <div class="membresia_list_second"><i class="fa fa-clock-o"></i> Acceso a eventos de Edge </div>
+        
+      </div>
+      <div class="col-md-6 text-left">
+        <h2>Selecciona ubicación</h2>
+        
+        <div class="membresia_list_second">El golf $330.000 / año </div>
+        
+        <div class="membresia_list_second">Bellavista $220.000 / año </div>
+        
+        <div class="membresia_list_second">Bellavista $110.000 / año </div>
+      </div>
+    </div>
+    <!--
+    <div class="row margin_top_60px">
+      <div class="col-md-offset-3 col-md-6">
+        <h4>Desde <span id="precio">$100.000</span> / Mes</h4>
+        <select id="select_locations" class="form-control">
+          <option value="$100.000">El Golf</option>
+          <option value="$120.000">Bellavista</option>
+          <option value="$130.000">Nucleo Ochagavía</option>
+        </select>
+        <br>
+        <a href="" class="btn btn-default btn-block">CTA</a>
+      </div>
+    </div>
+    -->
+  </div>
+</section>
